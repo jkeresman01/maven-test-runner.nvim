@@ -1,7 +1,7 @@
 local M = {}
 
 M.open = function()
-    local border = {'╭', '─', '╮', '│', '╯', '─', '╰', '│'}
+    local border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' }
 
     local bufnr = vim.api.nvim_create_buf(true, false)
     local width = 60
@@ -38,7 +38,7 @@ M.open = function()
     end
 
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, centered_lines)
-    vim.api.nvim_win_set_cursor(winid, {5, #('TEST:')})
+    vim.api.nvim_win_set_cursor(winid, { 3, #('CLASS:') })
     vim.api.nvim_win_set_option(winid, 'winhighlight', 'Normal:NormalFloat,FloatBorder:Float')
     vim.cmd('highlight NormalFloat guibg=none ctermbg=none')
 end
