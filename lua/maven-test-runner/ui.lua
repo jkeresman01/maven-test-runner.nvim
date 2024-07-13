@@ -39,8 +39,8 @@ M.open = function()
 
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, centered_lines)
     vim.api.nvim_win_set_cursor(winid, {5, #('TEST:')})
-    vim.api.nvim_win_set_option(winid, 'winhighlight', 'Normal:NormalFloat,FloatBorder:Float')  -- Adjust the highlight for border
-    vim.cmd('highlight NormalFloat guibg=none ctermbg=none')  -- Ensure transparency for both GUI and terminal
+    vim.api.nvim_win_set_option(winid, 'winhighlight', 'Normal:NormalFloat,FloatBorder:Float')
+    vim.cmd('highlight NormalFloat guibg=none ctermbg=none')
 end
 
 M.close = function()
