@@ -1,2 +1,2 @@
 # maven-test-runner.nvim
-Simple plugin for Neovim that enables me to run tests with maven.
+maven-test-runner.nvim integrates Maven test execution directly within Neovim, offering a floating UI for configuring and running tests effortlessly.
