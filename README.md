@@ -53,7 +53,7 @@ local ui  = require("maven-test-runner.ui")
 local mvn = require("maven-test-runner.mvn")
 
 vim.keymap.set("n", "<leader>u", function() ui.open() end)          --  Open Maven Test Runner UI  
-vim.keymap.set("n", "<ESC>", function() ui.close() end)             --  Close Maven Test Runner UI
+vim.keymap.set("n", "<ESC>",     function() ui.close() end)         --  Close Maven Test Runner UI
 vim.keymap.set("n", "<leader>r", function() mvn.execute() end)      --  Execute Maven Test|Tests  
 ```
 
