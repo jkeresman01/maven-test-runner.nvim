@@ -34,5 +34,5 @@ vim.keymap.set("n", "<leader>r", function() mvn.execute() end)      --  Execute 
 ```
 
 ## Note ##
-
-This is still work in progress, next things, detect class name from current buffer, add field in UI to pass VM options....
+ 
+This is still work in progress, next things, detect class name from current buffer, add field in UI to pass VM options, execute suite ....
