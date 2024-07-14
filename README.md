@@ -14,11 +14,35 @@ This Neovim plugin, Maven Test Runner, enhances the developer's workflow by prov
 
 
 ## Installation ##
-* neovim 0.5.0+ required!!
-* Install using your plugin manager, I'm using packer so for me it would be:
+* neovim 0.5.0+ required :exclamation:
+* Install using your plugin manager
 
+`Packer`  
 ```lua
-use "jkeresman01/maven-test-runner.nvim"
+use 'jkeresman01/maven-test-runner.nvim'
+```
+
+`Vim-Plug`  
+```lua
+Plug 'jkeresman01/maven-test-runner.nvim'
+```
+
+`dein`  
+```lua
+call dein#add('jkeresman01/maven-test-runner.nvim')
+```
+
+`paq`  
+```lua
+'jkeresman01/maven-test-runner.nvim';
+```
+
+`layz.nvim`  
+```lua
+-- plugins/mave-test-runner.lua:
+return {
+     'jkeresman01/maven-test-runner.nvim'
+}
 ```
 
 ## Customization ##
@@ -33,6 +57,6 @@ vim.keymap.set("n", "<ESC>", function() ui.close() end)             --  Close Ma
 vim.keymap.set("n", "<leader>r", function() mvn.execute() end)      --  Execute Maven Test|Tests  
 ```
 
-## Note ##
+## Note :grey_exclamation: ##
  
 This is still work in progress, next things, detect class name from current buffer, add field in UI to pass VM options, execute suite ....
