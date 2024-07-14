@@ -39,7 +39,7 @@ call dein#add('jkeresman01/maven-test-runner.nvim')
 
 `layz.nvim`  
 ```lua
--- plugins/mave-test-runner.lua:
+-- plugins/maven-test-runner.lua:
 return {
      'jkeresman01/maven-test-runner.nvim'
 }
