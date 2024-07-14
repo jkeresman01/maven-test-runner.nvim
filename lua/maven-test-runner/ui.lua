@@ -7,7 +7,7 @@ M.open = function()
     local width = 60
     local height = 10
     local row = math.floor((vim.api.nvim_win_get_height(0) - height) / 2)
-    local col = math.floor((vim.api.nvim_win_get_width(0) - width) / 2)
+    local col = math.floor((vim.api.nvim_win_get_width(0)  - width)  / 2)
 
     local winid = vim.api.nvim_open_win(bufnr, true, {
         relative = 'editor',
@@ -40,6 +40,7 @@ M.open = function()
     vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, centered_lines)
     vim.api.nvim_win_set_cursor(winid, { 3, #('CLASS:') })
     vim.api.nvim_win_set_option(winid, 'winhighlight', 'Normal:NormalFloat,FloatBorder:Float')
+
     vim.cmd('highlight NormalFloat guibg=none ctermbg=none')
 end
 
