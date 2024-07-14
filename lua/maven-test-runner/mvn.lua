@@ -5,10 +5,10 @@ M.execute = function()
 
     local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 
-    local className = string.match(lines[3], "CLASS:%s*(.*)")
-    local testName = string.match(lines[5], "TEST:%s*(.*)")
+    local class_name = string.match(lines[3], "CLASS:%s*(.*)")
+    local test_name = string.match(lines[5], "TEST:%s*(.*)")
 
-    local command = string.format("mvn test -Dtest=%s#%s", className, testName)
+    local command = string.format("mvn test -Dtest=%s#%s", class_name, test_name)
 
     vim.cmd('vsplit term://bash')
     vim.fn.termopen(command)
