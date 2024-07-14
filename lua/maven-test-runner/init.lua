@@ -6,7 +6,7 @@ M.setup = function(user_config)
 
     local keymaps = {
         open = { "n", "<leader>m", ui.open, { desc = "Open Maven Test Runner UI" } },
-        close = { "n", "<ESC>", ui.close, { desc = "Close Maven Test Runner UI" } },
+        close = { "n", "<leader>c", ui.close, { desc = "Close Maven Test Runner UI" } },
         execute = { "n", "<CR>", mvn.execute, { desc = "Execute Maven Test" } },
     }
 

@@ -9,7 +9,7 @@ This Neovim plugin, Maven Test Runner, enhances the developer's workflow by prov
 | Keybind       | Action                          |
 |---------------|---------------------------------|
 | `<leader>m`   | Open Maven Test Runner UI       |
-| `<ESC>`       | Close Maven Test Runner UI      |
+| `<leader>c`   | Close Maven Test Runner UI      |
 | `<CR>`        | Execute Maven test              |
 
 
