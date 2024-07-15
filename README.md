@@ -2,7 +2,7 @@
 
 This Neovim plugin, Maven Test Runner, enhances the developer's workflow by providing a streamlined interface for executing Maven tests directly from the editor.
 
-[![asciicast](https://asciinema.org/a/C8J48tR7BHjfxHN0lViMFURC7.svg)](https://asciinema.org/a/C8J48tR7BHjfxHN0lViMFURC7)
+[[![asciicast](https://asciinema.org/a/C8J48tR7BHjfxHN0lViMFURC7.svg)](https://asciinema.org/a/C8J48tR7BHjfxHN0lViMFURC7)](https://asciinema.org/a/1KoRnOYpVkXmZmzgD9deN2Fyz)
 
 ## Default mappings ##
 ***
@@ -15,6 +15,7 @@ This Neovim plugin, Maven Test Runner, enhances the developer's workflow by prov
 
 ## Installation ##
 * neovim 0.5.0+ required :exclamation:
+* Dependecies: treesiter
 * Install using your plugin manager
 
 `Packer`  
@@ -53,8 +54,8 @@ local ui  = require("maven-test-runner.ui")
 local mvn = require("maven-test-runner.mvn")
 
 vim.keymap.set("n", "<leader>u", function() ui.open() end)          --  Open Maven Test Runner UI  
-vim.keymap.set("n", "<ESC>",     function() ui.close() end)         --  Close Maven Test Runner UI
-vim.keymap.set("n", "<leader>r", function() mvn.execute() end)      --  Execute Maven Test|Tests  
+vim.keymap.set("n", "<leader>c", function() ui.close() end)         --  Close Maven Test Runner UI
+vim.keymap.set("n", "<leader>m", function() mvn.execute() end)      --  Execute Maven Test|Tests  
 ```
 
 ## Note :grey_exclamation: ##
