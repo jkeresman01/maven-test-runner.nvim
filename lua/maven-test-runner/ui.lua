@@ -35,14 +35,9 @@ M.open = function()
     local first_line = lines[1]
     local line_length = #first_line
     local spaces = string.rep(' ', math.floor((width - line_length) / 2))
-    local centered_first_line = spaces .. first_line
+    lines[1] = spaces .. first_line
 
-    local centered_lines = {centered_first_line}
-    for i = 2, #lines do
-        table.insert(centered_lines, lines[i])
-    end
-
-    vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, centered_lines)
+    vim.api.nvim_buf_set_lines(bufnr, 0, -1, true, lines)
     vim.api.nvim_win_set_cursor(winid, { 3, #('CLASS:') })
     vim.api.nvim_win_set_option(winid, 'winhighlight', 'Normal:NormalFloat,FloatBorder:Float')
 
