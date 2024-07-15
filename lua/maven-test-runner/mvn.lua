@@ -1,3 +1,5 @@
+local ui = require("maven-test-runner.ui")
+
 local M = {}
 
 M.execute = function()
@@ -8,12 +10,14 @@ M.execute = function()
     local class_name = string.match(lines[3], "CLASS:%s*(.*)")
     local test_name = string.match(lines[5], "TEST:%s*(.*)")
 
-    local command = string.format("mvn test -Dtest=%s#%s", class_name, test_name)
+    local mvn_test_command = string.format("mvn test -Dtest=%s#%s", class_name, test_name)
 
     vim.cmd('vsplit term://bash')
-    vim.fn.termopen(command)
+    vim.fn.termopen(mvn_test_command)
 
     vim.cmd('wincmd p')
+
+    ui.close()
 end
 
 return M
