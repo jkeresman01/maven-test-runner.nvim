@@ -1,7 +1,12 @@
+local util = require("maven-test-runner.util")
+
 local M = {}
 
 M.open = function()
     local border = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' }
+
+    local java_class_bufnr = vim.api.nvim_get_current_buf()
+    local java_class = util.get_java_class(java_class_bufnr)
 
     local bufnr = vim.api.nvim_create_buf(true, false)
     local width = 60
@@ -22,7 +27,7 @@ M.open = function()
     local lines = {
         '--------------(   MAVEN TEST RUNNER   )--------------',
         '',
-        'CLASS:',
+        'CLASS:' .. java_class,
         '',
         'TEST:',
     }
