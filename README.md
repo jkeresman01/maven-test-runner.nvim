@@ -57,7 +57,3 @@ vim.keymap.set("n", "<leader>u", function() ui.open() end)          --  Open Mav
 vim.keymap.set("n", "<leader>c", function() ui.close() end)         --  Close Maven Test Runner UI
 vim.keymap.set("n", "<leader>m", function() mvn.execute() end)      --  Execute Maven Test|Tests  
 ```
-
-## Note :grey_exclamation: ##
- 
-This is still work in progress, next things, detect class name from current buffer, add field in UI to pass VM options, execute suite ....
