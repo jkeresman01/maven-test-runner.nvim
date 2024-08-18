@@ -1,6 +1,6 @@
 # maven-test-runner.nvim
 
-This Neovim plugin, Maven Test Runner, enhances the developer's workflow by providing a streamlined interface for executing Maven tests directly from the editor.
+Neovim plugin that allows you to execute tests from Neovim using maven.
 
 [![asciicast](https://asciinema.org/a/1KoRnOYpVkXmZmzgD9deN2Fyz.svg)](https://asciinema.org/a/1KoRnOYpVkXmZmzgD9deN2Fyz)
 
